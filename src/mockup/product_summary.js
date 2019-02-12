@@ -1,19 +1,3 @@
-const PRODUCT_SUMMARY = [{
-  id: 0,
-  name: '',
-  image_url: '',
-  number: '',
-  flag: '',
-  has_buybox: false,
-  stock: 10,
-  buybox_winrate: 90,
-  amz_bank: 1,
-  user_Rank: 1,
-  sellers: 3,
-  user_price: 38.98,
-  amz_price: 45.98,
-  lowest_price: 37.98,
-}];
 
 let data = [];
 function getRandomInt(max) {

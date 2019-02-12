@@ -112,11 +112,12 @@ export default class SummaryTable extends Component {
     this.setState({
       sortIndex: ind,
       sortOrder: this.state.sortOrder * -1,
-    }, () => this.sortData());
+    });
   };
 
-  sortData = () => {
-    const { data, sortIndex, sortOrder } = this.state;
+  render() {
+    const { data } = this.props;
+    const { diff, sortIndex, sortOrder } = this.state;
 
     data.sort((left, right) => {
       switch (sortIndex) {
@@ -142,13 +143,6 @@ export default class SummaryTable extends Component {
           return (right.id - left.id) * sortOrder;
       }
     });
-
-    this.setState({ data })
-  };
-
-  render() {
-    const { data } = this.props;
-    const { diff } = this.state;
 
     return (
       <div className='table-container'>
